@@ -1,0 +1,98 @@
+/* * means everything */
+*{            
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  width: 100vw; 
+  height: 100vh;
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+/*By default, elements are position: static; — they just follow the normal document flow.
+When you set position: relative;, the element still stays in the normal flow, but you can shift it relative to its original position using top, right, bottom, or left.
+Importantly, other elements around it don’t move — they behave as if the element never shifted.
+*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+The overlay in your CSS is there to create a visual effect on top of the background image
+position: absolute; inset: 0; → makes the overlay stretch across the entire .hero section.
+backdrop-filter: blur(6px); → blurs whatever is behind it (the background image).
+*/
+.overlay{
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content{
+  position: relative;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.content h1{
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.content p{
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.buttons{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/*
+.buttons button means:
+“Find any <button> that is a child (or descendant) of an element with class buttons
+*/
+
+.buttons button{
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.buttons .register{
+  background-color: #021b0b;
+  color: White;
+}
+
+.footer{
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #32e0af;
+}
+
+.footer h3{
+  margin-bottom: 10px;
+}
+
+.footer p{
+  max-width: 600px;
+  margin: 0 auto 15px auto;
+  color: #333;
+}
+
+.copy{
+  font-size: 14px;
+  color: #666;
+}
